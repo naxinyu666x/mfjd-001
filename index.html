@@ -1,59 +1,170 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MFJD-001 | 我的云平台</title>
-    <style>
-        body{
-            font-family: Arial, sans-serif;
-            background:#111827;
-            color:white;
-            text-align:center;
-            margin-top:80px;
-        }
-        .box{
-            width:700px;
-            margin:auto;
-            padding:30px;
-            background:#1f2937;
-            border-radius:12px;
-        }
-        h1{
-            color:#38bdf8;
-        }
-        p{
-            color:#d1d5db;
-        }
-        a{
-            color:#22c55e;
-            text-decoration:none;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MFJD 云控制台</title>
+
+<style>
+body{
+    margin:0;
+    background:#0f172a;
+    color:white;
+    font-family:Arial;
+}
+
+header{
+    background:#111827;
+    padding:20px;
+    text-align:center;
+    font-size:30px;
+    font-weight:bold;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+    margin-top:30px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:#1e293b;
+    border-radius:12px;
+    padding:20px;
+    box-shadow:0 0 10px rgba(0,0,0,.3);
+}
+
+.card h2{
+    margin-top:0;
+    color:#38bdf8;
+}
+
+.status{
+    font-size:18px;
+    margin:10px 0;
+}
+
+.online{
+    color:#22c55e;
+}
+
+.offline{
+    color:#ef4444;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:8px;
+    background:#2563eb;
+    color:white;
+    cursor:pointer;
+    font-size:16px;
+}
+
+button:hover{
+    background:#1d4ed8;
+}
+</style>
+
 </head>
 
 <body>
 
-<div class="box">
+<header>
+🚀 MFJD 云控制台
+</header>
 
-<h1>🚀 MFJD-001 云控制台</h1>
+<div class="container">
 
-<p>欢迎来到我的个人云平台。</p>
+<div class="grid">
 
-<p>这里将用于：</p>
+<div class="card">
+<h2>Cloudflare Pages</h2>
 
-<p>✅ Oracle Cloud</p>
-<p>✅ Cloudflare</p>
-<p>✅ GitHub</p>
-<p>✅ Docker</p>
-<p>✅ VPS 运维</p>
-<p>✅ 自动部署</p>
+<div class="status">
+状态：
+<span class="online">● 在线</span>
+</div>
 
-<hr>
+<button>查看网站</button>
 
-<p>当前状态：</p>
+</div>
 
-<p>🟢 Cloudflare Pages 已部署成功</p>
+<div class="card">
+
+<h2>Cloudflare Worker</h2>
+
+<div class="status">
+状态：
+<span class="online">● 在线</span>
+</div>
+
+<button>调用 API</button>
+
+</div>
+
+<div class="card">
+
+<h2>GitHub</h2>
+
+<div class="status">
+状态：
+<span class="online">● 已连接</span>
+</div>
+
+<button>打开仓库</button>
+
+</div>
+
+<div class="card">
+
+<h2>Oracle Cloud VPS</h2>
+
+<div class="status">
+状态：
+<span class="offline">● 尚未部署</span>
+</div>
+
+<button>等待上线</button>
+
+</div>
+
+<div class="card">
+
+<h2>Docker</h2>
+
+<div class="status">
+状态：
+<span class="offline">● 尚未安装</span>
+</div>
+
+<button>等待安装</button>
+
+</div>
+
+<div class="card">
+
+<h2>节点状态</h2>
+
+<div class="status">
+状态：
+<span class="offline">● 暂无节点</span>
+</div>
+
+<button>查看节点</button>
+
+</div>
+
+</div>
 
 </div>
 
